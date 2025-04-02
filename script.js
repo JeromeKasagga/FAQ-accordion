@@ -1,13 +1,24 @@
 const questions = document.querySelectorAll('.qtn');
 
-accordion = {
-    qtn : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nemo natus consequuntur totam optio blanditiis alias sint labore quas recusandae cum, temporibus cupiditate corporis exercitationem nam,soluta culpa fugit deleniti.",
-    qtn : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nemo natus consequuntur totam optio blanditiis alias sint labore quas recusandae cum, temporibus cupiditate corporis exercitationem nam,soluta culpa fugit deleniti.",
-    qtn : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nemo natus consequuntur totam optio blanditiis alias sint labore quas recusandae cum, temporibus cupiditate corporis exercitationem nam,soluta culpa fugit deleniti."
-}
+const faqsData = [
+    {
+    question: "What is the return policy",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nemo natus consequuntur totam optio blanditiis alias sint labore quas recusandae cum, temporibus cupiditate corporis exercitationem nam,soluta culpa fugit deleniti."
+},
+{
+    question: "What is the return policy",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nemo natus consequuntur totam optio blanditiis alias sint labore quas recusandae cum, temporibus cupiditate corporis exercitationem nam,soluta culpa fugit deleniti."
+},
+{
+    question: "What is the return policy",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nemo natus consequuntur totam optio blanditiis alias sint labore quas recusandae cum, temporibus cupiditate corporis exercitationem nam,soluta culpa fugit deleniti."
+},
+];
+
+
 
 questions.forEach(question => {
-    question.addEventListener('click', function(){
+    question.addEventListener('click', function () {
         const answer = this.nextElementSibling; // Get next answer div
         answer.classList.toggle('active'); // Toggle active class
 
