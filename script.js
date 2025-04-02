@@ -1,5 +1,6 @@
 const questions = document.querySelectorAll('.qtn');
 
+// data object
 const faqsData = [
     {
     question: "What is the return policy",
@@ -14,6 +15,29 @@ const faqsData = [
         answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nemo natus consequuntur totam optio blanditiis alias sint labore quas recusandae cum, temporibus cupiditate corporis exercitationem nam,soluta culpa fugit deleniti."
 },
 ];
+
+// loop through the object and dynamically display them
+const container = document.querySelector('accordion-container');
+faqsData.forEach(item => {
+    // dynamic display of qtn div
+    const qtnDiv = document.createElement('div');
+    qtnDiv.textContent = item.question;
+    qtnDiv.setAttribute('data-symbol', '+');
+
+    // dynamic display of answer divv
+    const answerDiv = document.createElement('div');
+    answerDiv.className = 'answer';
+
+    const paragraph = document.createElement('p');
+    paragraph.textContent = item.answer;
+
+    answerDiv.appendChild(paragraph);
+    container.appendChild(qtnDiv);
+    container.appendChild(answerDiv);
+
+}
+
+)
 
 
 
